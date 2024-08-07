@@ -144,8 +144,8 @@ async def main():
     article_urls = fetch_article_urls(base_url)
     
     # Scrape all URLs and send them to the Telegram channel
-    bot_token = os.environ.get("TELEGRAM_BOT_TOKEN", "1637529837:AAFraGS_WwfTV8rj9XOhBy7PoxnbnVXBVEM")
-    channel_id = os.environ.get("TELEGRAM_CHANNEL_ID", "@currentadda")
+    bot_token = os.environ["TELEGRAM_BOT_TOKEN"]
+    channel_id = os.environ["TELEGRAM_CHANNEL_ID"]
 
     for url in article_urls:
         print(f"Scraping and sending: {url}")
